@@ -674,7 +674,16 @@ global with sharing class LogEntryEventBuilder {
     }
 
     private static List<String> getIgnoredClasses() {
-        return new List<String>{ FlowLogger.class.getName(), Logger.class.getName(), LogMessage.class.getName(), LogEntryEventBuilder.class.getName() };
+        return new List<String>{
+            ComponentLogger.class.getName(),
+            FlowLogEntry.class.getName(),
+            FlowRecordLogEntry.class.getName(),
+            FlowCollectionLogEntry.class.getName(),
+            FlowLogger.class.getName(),
+            Logger.class.getName(),
+            LogMessage.class.getName(),
+            LogEntryEventBuilder.class.getName()
+        };
     }
 
     private static String getNamespacePrefix() {
